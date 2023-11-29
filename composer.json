@@ -1,0 +1,27 @@
+{
+    "name": "wpp/wp-plugin-mvc-boilerplate",
+    "description": "WordPress Plugin: Model-View-Controller Design Patterns Boilerplate",
+    "type": "wordpress-plugin",
+    "license": "GNU General Public License v3.0",
+    "autoload": {
+        "psr-4": {
+            "Wpp\\WpPluginMvcBoilerplate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ericson Weah",
+            "email": "ericson.weah@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.8",
+        "timber/timber": "^2.0",
+        "twig/markdown-extra": "^3.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
