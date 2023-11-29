@@ -1,7 +1,7 @@
-<?php namespace Wpp\WpPluginMvcBoilerplate\Taxonomies;
+<?php namespace Wpp\WpPluginMvcBoilerplate\Assets;
 
 
-class Taxonomy {
+class Asset {
     public function __construct(){
         $this->init();
     }

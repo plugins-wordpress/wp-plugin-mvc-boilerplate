@@ -2,3 +2,5 @@
 /.env 
 
 /vendor/
+/server/node_modules/
+/server/.env 

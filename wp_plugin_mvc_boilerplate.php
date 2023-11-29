@@ -52,6 +52,10 @@ if (!class_exists('Timber')) {
 \Timber\Timber::init();
 \Timber\Timber::$locations = plugin_dir_path(__FILE__) . './views';
 
+use Wpp\WpPluginMvcBoilerplate\Plugin; 
+
+new Plugin();
+
 
 
 

@@ -1,7 +1,6 @@
-<?php namespace Wpp\WpPluginMvcBoilerplate\Taxonomies;
+<?php namespace Wpp\WpPluginMvcBoilerplate\Widgets; 
 
-
-class Taxonomy {
+class Widget {
     public function __construct(){
         $this->init();
     }
