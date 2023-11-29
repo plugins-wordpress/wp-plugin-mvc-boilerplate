@@ -1,0 +1,1 @@
+<?php // Silently ignore
