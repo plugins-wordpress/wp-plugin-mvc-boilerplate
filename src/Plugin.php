@@ -13,6 +13,7 @@
  use Wpp\WpPluginMvcBoilerplate\Taxonomies\Taxonomy;
  use Wpp\WpPluginMvcBoilerplate\Widgets\Widget;
  use Wpp\WpPluginMvcBoilerplate\Assets\Asset;
+ use Wpp\WpPluginMvcBoilerplate\Apis\Api;
 class Plugin
 {
     /**
@@ -110,7 +111,7 @@ class Plugin
     }
 
 
-       /**
+    /**
      * Define assets for the plugin.
      */
     protected function wp_plugin_mvc_boilerplate_assets()
@@ -118,6 +119,17 @@ class Plugin
        
         // Define and configure assets here, if applicable.
         new Asset();
+    }
+
+
+    /**
+     * Define assets for the plugin.
+     */
+    protected function wp_plugin_mvc_boilerplate_apis()
+    {
+       
+        // Define and configure apis here, if applicable.
+        new Api();
     }
 
 
@@ -136,6 +148,7 @@ class Plugin
         $this->wp_plugin_mvc_boilerplate_widgets();
         $this->wp_plugin_mvc_boilerplate_view_extensions();
         $this->wp_plugin_mvc_boilerplate_assets();
+        $this->wp_plugin_mvc_boilerplate_apis();
     }
 
     /**
