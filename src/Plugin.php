@@ -14,6 +14,7 @@
  use Wpp\WpPluginMvcBoilerplate\Widgets\Widget;
  use Wpp\WpPluginMvcBoilerplate\Assets\Asset;
  use Wpp\WpPluginMvcBoilerplate\Apis\Api;
+ use Wpp\WpPluginMvcBoilerplate\Routes\Route;
 class Plugin
 {
     /**
@@ -134,6 +135,18 @@ class Plugin
 
 
     /**
+     * Define assets for the plugin.
+     */
+    protected function wp_plugin_mvc_boilerplate_routes()
+    {
+       
+        // Define and configure apis here, if applicable.
+        //new Api();
+
+       // new Route();
+    }
+
+    /**
      * Initialize the plugin by calling various initialization methods.
      */
     protected function wp_plugin_mvc_boilerplate_initialize()
@@ -149,6 +162,7 @@ class Plugin
         $this->wp_plugin_mvc_boilerplate_view_extensions();
         $this->wp_plugin_mvc_boilerplate_assets();
         $this->wp_plugin_mvc_boilerplate_apis();
+        $this->wp_plugin_mvc_boilerplate_routes();
     }
 
     /**

@@ -2,7 +2,7 @@
 
 use Wpp\WpPluginMvcBoilerplate\Views\View;
 
-class Controller {
+class HomeController {
     public View $view; 
     public function __construct(){
         $this->init();
@@ -10,6 +10,10 @@ class Controller {
     }
     public function init(){
         $this->view = new View();
+    }
+
+    public function index(){
+        return $this->view::render('home/index');
     }
 
 

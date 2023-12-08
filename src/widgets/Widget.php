@@ -18,7 +18,7 @@ class Widget {
 
         register_widget('Wpp\WpPluginMvcBoilerplate\Widgets\SocialLinks');
         // register_widget('Wpp\WpPluginMvcBoilerplate\Widgets\Simple');
-        register_widget('Wpp\WpPluginMvcBoilerplate\Widgets\Simple');
+        // register_widget('Wpp\WpPluginMvcBoilerplate\Widgets\Simple');
 
     }
 } 
