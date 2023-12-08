@@ -3,9 +3,9 @@
 
 //use Wpp\WpPluginMvcBoilerplate\Widgets\WP_Widget;; 
 
-use WP_Widget;
 
-class SocialLinks extends WP_Widget {
+
+class SocialLinks extends \WP_Widget {
 
 	/**
 	 * Sets up the widgets name etc

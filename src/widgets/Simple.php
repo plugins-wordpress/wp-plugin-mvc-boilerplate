@@ -3,8 +3,8 @@
  * Adds Simple widget.
  */
 
- use WP_Widget;
-class Simple extends WP_Widget {
+
+class Simple extends \WP_Widget {
 	/**
 	 * Register widget with WordPress.
 	 */
@@ -68,4 +68,4 @@ class Simple extends WP_Widget {
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		return $instance;
 	}
-} // class Foo_Widget
+} 
