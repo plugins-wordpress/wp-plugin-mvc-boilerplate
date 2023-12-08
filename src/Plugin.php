@@ -97,7 +97,7 @@ class Plugin
     protected function wp_plugin_mvc_boilerplate_widgets()
     {
         // Define and configure widgets here, if applicable.
-        new Widget();
+       new Widget();
     }
 
     /**

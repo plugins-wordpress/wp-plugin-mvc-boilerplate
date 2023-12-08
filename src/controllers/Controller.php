@@ -5,7 +5,6 @@ use Wpp\WpPluginMvcBoilerplate\Views\View;
 class Controller {
     public View $view; 
     public function __construct(){
-
         $this->init();
 
     }
