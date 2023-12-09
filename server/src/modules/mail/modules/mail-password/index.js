@@ -1,1 +1,0 @@
-module.exports = (options = {}) => require('./src/template')(options);

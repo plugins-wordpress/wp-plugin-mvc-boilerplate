@@ -1,0 +1,36 @@
+{% extends './layouts/app.njk' %}
+
+<!-- Page Titlee-->
+{% block pageTitle %}
+  Course 
+{% endblock %}
+
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './apps/Academy/course/partials/vendor-styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './apps/Academy/course/partials/page-styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './apps/Academy/course/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './apps/Academy/course/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './apps/Academy/course/partials/vendor-scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include './apps/Academy/course/partials/page-scripts.njk' %}
+{% endblock %}

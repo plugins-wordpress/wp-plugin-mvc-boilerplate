@@ -1,0 +1,36 @@
+{% extends './layouts/app.njk' %}
+
+<!-- Page Titlee-->
+{% block pageTitle %}
+  Dashboard
+{% endblock %}
+
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './apps/Academy/dashboard/partials/vendor-styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './apps/Academy/dashboard/partials/page-styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './apps/Academy/dashboard/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './apps/Academy/dashboard/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './apps/Academy/dashboard/partials/vendor-scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include './apps/Academy/dashboard/partials/page-scripts.njk' %}
+{% endblock %}

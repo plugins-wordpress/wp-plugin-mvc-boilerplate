@@ -1,0 +1,36 @@
+{% extends './layouts/app.njk' %}
+
+<!-- Page Titlee-->
+{% block pageTitle %}
+  Overview
+{% endblock %}
+
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './apps/ecommerce/customers/customer-details/overview/partials/vendor-styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './apps/ecommerce/customers/customer-details/overview/partials/page-styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './apps/ecommerce/customers/customer-details/overview/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './apps/ecommerce/customers/customer-details/overview/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './apps/ecommerce/customers/customer-details/overview/partials/vendor-scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include './apps/ecommerce/customers/customer-details/overview/partials/page-scripts.njk' %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends './layouts/full/app.njk' %}
+
+<!-- Page Title -->
+{% block pageTitle %}
+ Register
+{% endblock%}
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include  './auth/register/partials/vendors/styles.njk' %}
+{% endblock%}
+  
+<!-- Page CSS -->
+{% block pageStyles %} 
+  {% include  './auth/register/partials/page/styles.njk' %}
+{% endblock%}
+
+ <!-- Content -->
+{% block content %}
+  {% include  './auth/register/content.njk' %}
+{% endblock%}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include  './auth/register/partials/vendors/scripts.njk' %}
+{% endblock%}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include  './auth/register/partials/page/scripts.njk' %}
+{% endblock%}

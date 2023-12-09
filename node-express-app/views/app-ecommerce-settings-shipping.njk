@@ -1,0 +1,37 @@
+{% extends './layouts/app.njk' %}
+
+
+<!-- Page Titlee-->
+{% block pageTitle %}
+  Shipping
+{% endblock %}
+
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './apps/eCommerce/settings/shipping/partials/vendor-styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './apps/eCommerce/settings/shipping/partials/page-styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './apps/eCommerce/settings/shipping/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './apps/eCommerce/settings/shipping/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './apps/eCommerce/settings/shipping/partials/vendor-scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include './apps/eCommerce/settings/shipping/partials/page-scripts.njk' %}
+{% endblock %}

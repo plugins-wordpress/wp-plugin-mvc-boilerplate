@@ -1,2 +1,0 @@
-exports.options = () => {}
-exports.option = () =>{}

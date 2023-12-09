@@ -1,0 +1,36 @@
+{% extends './layouts/app.njk' %}
+
+<!-- Page Titlee-->
+{% block pageTitle %}
+  Account
+{% endblock %}
+
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './pages/account-settings/account/partials/vendor-styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './pages/account-settings/account/partials/page-styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './pages/account-settings/account/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './pages/account-settings/account/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './pages/account-settings/account/partials/vendor-scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include './pages/account-settings/account/partials/page-scripts.njk' %}
+{% endblock %}

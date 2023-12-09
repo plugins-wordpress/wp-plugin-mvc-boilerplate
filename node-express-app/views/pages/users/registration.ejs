@@ -1,0 +1,30 @@
+<div class="container" id="registration" style="padding-bottom: 4%; padding-top: 2%;">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Register Now!</h1>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <form method="POST" action="/users/registration">
+              <div class="form-group">
+                <label for="inputName">Name</label>
+                <input class="form-control" id="inputName" type="text" name="username" aria-describedby="nameHelp" placeholder="Enter your name" required="required" minlength="3"/><small class="form-text text-muted" id="nameHelp">This is how others will see you on the page. Please enter at least 3 characters.</small>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail">Email address</label>
+                <input class="form-control" id="inputEmail" type="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required="required"/><small class="form-text text-muted" id="emailHelp">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input class="form-control" id="inputPassword" type="password" name="password" placeholder="Password" required="required" minlength="6"/><small class="form-text text-muted" id="emailHelp">At least 8 characters.</small>
+              </div>
+              <div class="form-group">
+                <label for="avatar">Your avatar picture</label>
+                <input class="form-control" id="inputFile" type="file" name="avatar" accept=".png, .jpg, .jpeg" aria-describedby="fileHelp"/><small class="form-text text-muted" id="fileHelp">PNG or JPG (Max 2MB)</small>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,31 @@
+brew remove mongodb-atlas-cli
+brew remove mongodb/brew/mongodb-community@6.0
+brew remove mongodb/brew/mongodb-mongocryptd
+brew remove mongodb/brew/libmongocrypt
+brew remove mongodb/brew/mongodb-csfle
+brew remove mongodb/brew/mongodb-mongocryptd@4.4
+brew remove mongodb/brew/mongodb-community
+brew remove mongodb/brew/mongodb-database-tools
+brew remove mongodb/brew/mongodb-mongocryptd@5.0
+brew remove mongodb/brew/mongodb-community-shell
+brew remove mongodb/brew/mongodb-enterprise
+brew remove mongodb/brew/mongodb-mongocryptd@6.0
+brew remove mongodb/brew/mongodb-community-shell@4.4
+brew remove mongodb/brew/mongodb-enterprise@4.4
+brew remove mongosh 
+brew remove mongodb/brew/mongodb-community@4.4
+brew remove mongodb/brew/mongodb-enterprise@5.0
+brew remove monetdb
+brew remove mongodb/brew/mongodb-community@5.0
+brew remove mongodb/brew/mongodb-enterprise@6.0
+
+##Casks
+brew remove gcollazo-mongodb
+brew remove mongodb-compass-isolated-edition
+brew remove mongodbpreferencepane
+brew remove mongodb-compass
+brew remove mongodb-compass-readonly
+brew remove mongotron
+brew remove mongodb-compass-beta
+brew remove mongodb-realm-studio
+brew remove osqlbooster-for-mongodb

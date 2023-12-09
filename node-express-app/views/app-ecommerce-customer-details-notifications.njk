@@ -1,0 +1,36 @@
+{% extends './layouts/app.njk' %}
+
+<!-- Page Titlee-->
+{% block pageTitle %}
+  Notifications
+{% endblock %}
+
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './apps/ecommerce/customers/customer-details/notifications/partials/vendor-styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './apps/ecommerce/customers/customer-details/notifications/partials/page-styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './apps/ecommerce/customers/customer-details/notifications/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './apps/ecommerce/customers/customer-details/notifications/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './apps/ecommerce/customers/customer-details/notifications/partials/vendor-scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include './apps/ecommerce/customers/customer-details/notifications/partials/page-scripts.njk' %}
+{% endblock %}

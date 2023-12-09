@@ -1,1 +1,0 @@
-module.exports = (req, res, next) => req.isAuthenticated() && req.user.isAdmin ? next() : res.redirect('back');

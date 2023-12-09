@@ -1,0 +1,30 @@
+{% extends './layouts/full/app.njk' %}
+
+<!-- Page Title -->
+{% block pageTitle %}
+ Login
+{% endblock%}
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include  './auth/login/partials/vendors/styles.njk' %}
+{% endblock%}
+  
+<!-- Page CSS -->
+{% block pageStyles %} 
+  {% include  './auth/login/partials/page/styles.njk' %}
+{% endblock%}
+
+ <!-- Content -->
+{% block content %}
+  {% include  './auth/login/content.njk' %}
+{% endblock%}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include  './auth/login/partials/vendors/scripts.njk' %}
+{% endblock%}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include  './auth/login/partials/page/scripts.njk' %}
+{% endblock%}

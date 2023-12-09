@@ -1,0 +1,32 @@
+{% extends './layouts/apps/app.njk' %}
+
+{% block pageTitle %}
+
+{% endblock %}
+
+{% block vendorsStyles %}
+    
+{% endblock %}
+
+{% block pagestyles %}
+  
+{% endblock %}
+    
+{% block content %}
+
+{% endblock %}
+
+{% block vendorsScripts%}
+
+{% endblock %}
+
+{% block pageScripts %}
+   <script>
+     const socket = io('http://localhost:3000/users', {secure: true});
+     socket.on('connect', () => {
+        console.log('socket connected');
+     })
+
+     socket.on('new-user', data => console.log('new user', data))
+   </script>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends './layouts/app.njk' %}
+
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './pages/faq/partials/vendor-styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './pages/faq/partials/page-styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './pages/faq/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './pages/faq/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './pages/faq/partials/vendor-scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include './pages/faq/partials/page-scripts.njk' %}
+{% endblock %}

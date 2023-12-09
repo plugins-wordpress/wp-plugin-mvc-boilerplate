@@ -1,0 +1,31 @@
+{% extends './layouts/app.njk' %}
+
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './pages/user-profile/profile/partials/vendor-styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './pages/user-profile/profile/partials/page-styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './pages/user-profile/profile/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './pages/user-profile/profile/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './pages/user-profile/profile/partials/vendor-scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include './pages/user-profile/profile/partials/page-scripts.njk' %}
+{% endblock %}

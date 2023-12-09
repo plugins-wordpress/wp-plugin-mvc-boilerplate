@@ -1,0 +1,78 @@
+<div class="card email-card-last mx-sm-4 mx-3 mt-4">
+    <div class="card-header d-flex justify-content-between align-items-center flex-wrap">
+        <div class="d-flex align-items-center mb-sm-0 mb-3">
+            <img src="/assets/img/avatars/1.png" alt="user-avatar" class="flex-shrink-0 rounded-circle me-3" height="40" width="40" id="mail-card-content-last-avatar" />
+            <div class="flex-grow-1 ms-1">
+                <h6 class="m-0" id="mail-card-content-last-name">Chandler Bing</h6>
+                <small class="text-muted" id="mail-card-content-last-email">iAmAhoot@email.com</small>
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <p class="mb-0 me-3 text-muted">June 20th 2020, 08:10 AM</p>
+            <i class="ti ti-paperclip cursor-pointer me-2"></i>
+            <i class="email-list-item-bookmark ti ti-star ti-sm cursor-pointer me-2"></i>
+            <div class="dropdown me-3 d-flex align-self-center">
+                <button class="btn p-0" type="button" id="dropdownEmailTwo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="ti ti-dots-vertical"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownEmailTwo">
+                    <a class="dropdown-item scroll-to-reply" href="javascript:void(0)">
+                        <i class="ti ti-corner-up-left me-1"></i>
+                        <span class="align-middle">Reply</span>
+                    </a>
+                    <a class="dropdown-item" href="javascript:void(0)">
+                        <i class="ti ti-corner-up-right me-1"></i>
+                        <span class="align-middle">Forward</span>
+                    </a>
+                    <a class="dropdown-item" href="javascript:void(0)">
+                        <i class="ti ti-alert-octagon me-1"></i>
+                        <span class="align-middle">Report</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <p class="fw-medium" id="mail-card-content-last-subject">Greetings!</p>
+        <p id="mail-card-content-last-body"></p>
+
+        <p class="mb-0">Sincerely yours,</p>
+        <p class="fw-medium mb-0">Envato Design Team</p>
+        <hr />
+        <p class="email-attachment-title mb-2">Attachments</p>
+        <div class="cursor-pointer">
+            <i class="ti ti-file"></i>
+            <span class="align-middle ms-1">report.xlsx</span>
+        </div>
+    </div>
+</div>
+<!-- Email View : Reply mail-->
+<div class="email-reply card mt-4 mx-sm-4 mx-3" id="email-reply-to-container">
+    <h6 class="card-header border-0" id="mail-card-content-last-reply-to">Reply to Ross Geller</h6>
+    <div class="card-body pt-0 px-3">
+        <div class="d-flex justify-content-start">
+            <div class="email-reply-toolbar border-0 w-100 ps-0">
+                <span class="ql-formats me-0">
+                    <button class="ql-bold"></button>
+                    <button class="ql-italic"></button>
+                    <button class="ql-underline"></button>
+                    <button class="ql-list" value="ordered"></button>
+                    <button class="ql-list" value="bullet"></button>
+                    <button class="ql-link"></button>
+                    <button class="ql-image"></button>
+                </span>
+            </div>
+        </div>
+        <div class="email-reply-editor"></div>
+        <div class="d-flex justify-content-end align-items-center">
+            <div class="me-3">
+                <label class="cursor-pointer" for="attach-file-1"><i class="ti ti-paperclip me-2"></i><span class="align-middle">Attachments</span></label>
+                <input type="file" name="file-input" class="d-none" id="attach-file-1" />
+            </div>
+            <button class="btn btn-primary">
+                <i class="ti ti-send ti-xs me-1"></i>
+                <span class="align-middle">Send</span>
+            </button>
+        </div>
+    </div>
+</div>

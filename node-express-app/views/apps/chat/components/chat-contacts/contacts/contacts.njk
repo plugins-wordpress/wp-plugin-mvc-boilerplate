@@ -1,0 +1,6 @@
+{% import '../../../macros/contacts/contact.njk' as Contact %}
+
+{% for contact in contacts %}
+  {{ Contact.user(contact)}} 
+{%endfor %}
+

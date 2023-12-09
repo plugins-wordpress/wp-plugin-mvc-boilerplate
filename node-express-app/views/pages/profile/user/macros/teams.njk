@@ -1,0 +1,114 @@
+{% macro teams (user, teams) %}
+<div class="card card-action mb-4">
+    <div class="card-header align-items-center">
+        <h5 class="card-action-title mb-0">Teams</h5>
+        <div class="card-action-element">
+            <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ti ti-dots-vertical text-muted"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="javascript:void(0);">Share teams</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0);">Suggest edits</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="javascript:void(0);">Report bug</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+     {% if teams.length %}
+     <div class="card-body">
+        <ul class="list-unstyled mb-0">
+           {% for team in teams  %}
+            <li class="mb-3">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-start">
+                        <div class="avatar me-2">
+                            <img src="{{team.avatar}}" alt="Avatar" class="rounded-circle" />
+                        </div>
+                        <div class="me-2 ms-1">
+                            <h6 class="mb-0">{{team.name}}</h6>
+                            <small class="text-muted">{{team.members.length}} Members</small>
+                        </div>
+                    </div>
+                    <div class="ms-auto">
+                        <a href="javascript:;"><span class="{{team.badgeClass}}">{{team.badge}}</span></a>
+                    </div>
+                </div>
+            </li>
+           {% endfor %}
+            {# <li class="mb-3">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-start">
+                        <div class="avatar me-2">
+                            <img src="/assets/img/icons/brands/support-label.png" alt="Avatar" class="rounded-circle" />
+                        </div>
+                        <div class="me-2 ms-1">
+                            <h6 class="mb-0">Support Team</h6>
+                            <small class="text-muted">122 Members</small>
+                        </div>
+                    </div>
+                    <div class="ms-auto">
+                        <a href="javascript:;"><span class="badge bg-label-primary">Support</span></a>
+                    </div>
+                </div>
+            </li>
+            <li class="mb-3">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-start">
+                        <div class="avatar me-2">
+                            <img src="/assets/img/icons/brands/figma-label.png" alt="Avatar" class="rounded-circle" />
+                        </div>
+                        <div class="me-2 ms-1">
+                            <h6 class="mb-0">UI Designers</h6>
+                            <small class="text-muted">7 Members</small>
+                        </div>
+                    </div>
+                    <div class="ms-auto">
+                        <a href="javascript:;"><span class="badge bg-label-info">Designer</span></a>
+                    </div>
+                </div>
+            </li>
+            <li class="mb-3">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-start">
+                        <div class="avatar me-2">
+                            <img src="/assets/img/icons/brands/vue-label.png" alt="Avatar" class="rounded-circle" />
+                        </div>
+                        <div class="me-2 ms-1">
+                            <h6 class="mb-0">Vue.js Developers</h6>
+                            <small class="text-muted">289 Members</small>
+                        </div>
+                    </div>
+                    <div class="ms-auto">
+                        <a href="javascript:;"><span class="badge bg-label-danger">Developer</span></a>
+                    </div>
+                </div>
+            </li>
+            <li class="mb-3">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-start">
+                        <div class="avatar me-2">
+                            <img src="/assets/img/icons/brands/twitter-label.png" alt="Avatar" class="rounded-circle" />
+                        </div>
+                        <div class="me-2 ms-1">
+                            <h6 class="mb-0">Digital Marketing</h6>
+                            <small class="text-muted">24 Members</small>
+                        </div>
+                    </div>
+                    <div class="ms-auto">
+                        <a href="javascript:;"><span class="badge bg-label-secondary">Marketing</span></a>
+                    </div>
+                </div>
+            </li> #}
+            <li class="text-center">
+                <a href="javascript:;">View all teams</a>
+            </li>
+        </ul>
+    </div>
+     {% endif %}
+</div>
+
+{% endmacro %}

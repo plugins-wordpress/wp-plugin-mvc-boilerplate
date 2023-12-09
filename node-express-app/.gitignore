@@ -1,0 +1,13 @@
+/node_modules
+/public/node_modules/
+/public/resources/node_modules/
+/.env 
+.env 
+/package.json 
+/package-lock.json
+/yarn.lock
+
+package.json 
+package-lock.json
+yarn.lock
+

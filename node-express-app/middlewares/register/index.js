@@ -1,0 +1,1 @@
+exports.register = (req, res, next) => req.isAuthenticated() ? res.redirect('/') : next()

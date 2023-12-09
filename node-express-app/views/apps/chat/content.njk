@@ -1,0 +1,80 @@
+<div class="app-chat card overflow-hidden">
+    <div class="row g-0">
+        <!-- Sidebar Left -->
+        <div class="col app-chat-sidebar-left app-sidebar overflow-hidden" id="app-chat-sidebar-left">
+            <div class="chat-sidebar-left-user sidebar-header d-flex flex-column justify-content-center align-items-center flex-wrap px-4 pt-5">
+               {% include './components/sidebar/left/header.njk' %}
+            </div>
+            <div class="sidebar-body px-4 pb-4">
+               {% include './components/sidebar/left/body.njk' %}
+            </div>
+        </div>
+        <!-- /Sidebar Left-->
+
+        <!-- Chat & Contacts -->
+        <div class="col app-chat-contacts app-sidebar flex-grow-0 overflow-hidden border-end" id="app-chat-contacts">
+            <div class="sidebar-header">
+               {% include './components/chat-contacts/header.njk' %}
+            </div>
+            <hr class="container-m-nx m-0" />
+            <div class="sidebar-body">
+                <div class="chat-contact-list-item-title">
+                    <h5 class="text-primary mb-0 px-4 pt-3 pb-2">Chats</h5>
+                </div>
+                <!-- Chats -->
+                <ul class="list-unstyled chat-contact-list" id="chat-list">
+                    <li class="chat-contact-list-item chat-list-item-0 d-none">
+                        <h6 class="text-muted mb-0">No Chats Found</h6>
+                    </li>
+                    {# {% include './components/chat-contacts/users/users.njk' %} #}
+                </ul>
+                <!-- Contacts -->
+                 {# <div class="chat-contact-list-item-title">
+                    <h5 class="text-primary mb-0 px-4 pt-3 pb-2">Contacts</h5>
+                </div> #}
+                <ul class="list-unstyled chat-contact-list mb-0" id="contact-list">
+                    <li class="chat-contact-list-item chat-contact-list-item-title">
+                        <h5 class="text-primary mb-0">Contacts</h5>
+                    </li>
+                    <li class="chat-contact-list-item contact-list-item-0 d-none">
+                        <h6 class="text-muted mb-0">No Contacts Found</h6>
+                    </li>
+                   {# {% include './components/chat-contacts/contacts/contacts.njk' %} #}
+                </ul>
+            </div>
+        </div>
+        <!-- /Chat contacts -->
+
+        <!-- Chat History -->
+        <div class="col app-chat-history bg-body">
+            <div class="chat-history-wrapper">
+                <div class="chat-history-header border-bottom">
+                    {% include './components/chat-history/header.njk' %}
+                </div>
+                <div class="chat-history-body bg-body">
+                    <ul class="list-unstyled chat-history" id="user-chat-history-container">
+                        {# {% include './components/chat-history/body/chats.njk' %} #}
+                    </ul>
+                </div>
+                <!-- Chat message form -->
+                <div class="chat-history-footer shadow-sm">
+                    {% include './components/chat-history/form.njk' %}
+                </div>
+            </div>
+        </div>
+        <!-- /Chat History -->
+
+        <!-- Sidebar Right -->
+        <div class="col app-chat-sidebar-right app-sidebar overflow-hidden" id="app-chat-sidebar-right">
+            <div class="sidebar-header d-flex flex-column justify-content-center align-items-center flex-wrap px-4 pt-5">
+               {% include './components/sidebar/right/header.njk' %}
+            </div>
+            <div class="sidebar-body px-4 pb-4">
+                {% include './components/sidebar/right/body.njk' %}
+            </div>
+        </div>
+        <!-- /Sidebar Right -->
+
+        <div class="app-overlay"></div>
+    </div>
+</div>

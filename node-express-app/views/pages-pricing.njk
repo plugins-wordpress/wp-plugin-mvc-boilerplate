@@ -1,0 +1,36 @@
+{% extends './layouts/app.njk' %}
+
+
+<!-- Page Title -->
+{% block pageTitle %}
+   Pricing
+{% endblock %}
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './pages/pricing/partials/vendor-styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './pages/pricing/partials/page-styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './pages/pricing/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './pages/pricing/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './pages/pricing/partials/vendor-scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include './pages/pricing/partials/page-scripts.njk' %}
+{% endblock %}

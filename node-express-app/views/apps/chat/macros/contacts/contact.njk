@@ -1,0 +1,13 @@
+{% macro user (contact) %}
+<li class="chat-contact-list-item" onclick="selectedChatContact('{{contact._id}}')">
+    <a class="d-flex align-items-center">
+        <div class="flex-shrink-0 avatar avatar-{{contact.status}}">
+            <img src="{{contact.avatar}}" alt="Avatar" class="rounded-circle" />
+        </div>
+        <div class="chat-contact-info flex-grow-1 ms-2">
+            <h6 class="chat-contact-name text-truncate m-0">{{contact.firstname}} {{contact.lastname}}</h6>
+            <p class="chat-contact-status text-muted text-truncate mb-0">{{contact.jobTitle}}</p>
+        </div>
+    </a>
+</li>
+{% endmacro %}

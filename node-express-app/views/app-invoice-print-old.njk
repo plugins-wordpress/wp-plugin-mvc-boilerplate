@@ -1,0 +1,36 @@
+{% extends './layouts/app.njk' %}
+
+
+<!-- Page Title -->
+{% block pageTitle %}
+  Invoice Print
+{% endblock %}
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './apps/invoice/print/partials/vendor-styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './apps/invoice/print/partials/page-styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './apps/invoice/print/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './apps/invoice/print/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './apps/invoice/print/partials/vendor-scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+  {% include './apps/invoice/print/partials/page-scripts.njk' %}
+{% endblock %}

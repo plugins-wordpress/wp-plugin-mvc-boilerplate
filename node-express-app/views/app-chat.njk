@@ -1,0 +1,44 @@
+{% extends './layouts/app.njk' %}
+
+
+<!-- Page Titlee-->
+{% block pageTitle %}
+  Chat
+{% endblock %}
+
+<!-- Vendors CSS -->
+{% block vendorStyles %}
+  {% include './apps/chat/partials/vendor/styles.njk' %}
+{% endblock %}
+
+<!-- Page CSS -->
+{% block pageStyles %}
+  {% include './apps/chat/partials/page/styles.njk' %}
+{% endblock %}
+
+<!-- Page Content -->
+{% block content %}
+  {% include './apps/chat/content.njk' %}
+{% endblock %}
+
+<!-- Page Side Menu -->
+{% block asideMenu%}
+  {% include './apps/chat/partials/aside-menu.njk' %}
+{% endblock %}
+
+<!-- Vendors JS -->
+{% block vendorScripts %}
+  {% include './apps/chat/partials/vendor/scripts.njk' %}
+{% endblock %}
+
+<!-- Page JS -->
+{% block pageScripts %}
+   <script type="module">
+        if(!window.user) window.user = {{ user | dump | safe}}
+        if(!window.contacts) window.contacts = {{ contacts | dump | safe}}
+        if(!window.users) window.users = {{ users | dump | safe}}
+        if(!window.chats) window.chats = {{ chats | dump | safe}}
+        window.localStorage.setItem('user', JSON.stringify(window.user));
+    </script>
+  {% include './apps/chat/partials/page/scripts.njk' %}
+{% endblock %}

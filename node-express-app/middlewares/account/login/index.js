@@ -1,0 +1,1 @@
+exports.loginMiddleware = (req, res, next) => req.isAuthenticated() ? res.redirect('/'): next()

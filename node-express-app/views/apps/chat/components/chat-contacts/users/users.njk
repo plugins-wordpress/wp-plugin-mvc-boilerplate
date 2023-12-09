@@ -1,0 +1,6 @@
+{% import '../../../macros/users/user.njk' as Chat %}
+
+{% for user in users %}
+  {{ Chat.chat(user)}} 
+{%endfor %}
+
