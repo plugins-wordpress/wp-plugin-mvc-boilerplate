@@ -10,5 +10,6 @@ class Style {
 
     public function wp_plugin_mvc_boilerplate_add_styles(){
         wp_enqueue_style('wppmvcb-main-style', plugins_url(). '/wp-plugin-mvc-boilerplate/public/css/app.css');
+        wp_enqueue_style('wppmvcb-newsletter-style', plugins_url(). '/wp-plugin-mvc-boilerplate/public/css/newsletter.css');
     }
 }

@@ -41,19 +41,13 @@ along with WordPress Plugin MVC Boilerplate. If not, see {URI to Plugin License}
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
+// Plugin General configuration
+require_once plugin_dir_path(__FILE__) . 'config.php';
 
 
-// Example initialization using Timber
-if (!class_exists('Timber')) {
-    // Timber not activated, handle accordingly
-}
-// Initialize Timber.
-\Timber\Timber::init();
-\Timber\Timber::$locations = plugin_dir_path(__FILE__) . './views';
 
+// Plugin MVC configuration
 use Wpp\WpPluginMvcBoilerplate\Plugin; 
-
 new Plugin();
 
 

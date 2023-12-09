@@ -9,6 +9,7 @@ class Script {
     }
 
     public function wp_plugin_mvc_boilerplate_add_scripts(){
-        wp_enqueue_script('wppmvcb-main-script', plugins_url(). '/wp-plugin-mvc-boilerplate/public/js/app.js');
+        wp_enqueue_script('wppmvcb-main-script', plugins_url(). '/wp-plugin-mvc-boilerplate/public/js/app.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_script('wppmvcb-newsletter-script', plugins_url(). '/wp-plugin-mvc-boilerplate/public/js/newsletter.js', array('jquery'), '1.0.0', true);
     }
 }
