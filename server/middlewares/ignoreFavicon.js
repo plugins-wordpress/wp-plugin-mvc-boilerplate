@@ -1,0 +1,1 @@
+module.exports = (req, res, next) => req.originalUrl.includes('favicon.ico') ? res.status(204).send() : next()

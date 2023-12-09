@@ -45,7 +45,6 @@ defined( 'ABSPATH' ) || exit;
 require_once plugin_dir_path(__FILE__) . 'config.php';
 
 
-
 // Plugin MVC configuration
 use Wpp\WpPluginMvcBoilerplate\Plugin; 
 new Plugin();

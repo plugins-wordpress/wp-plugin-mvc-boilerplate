@@ -1,21 +1,102 @@
 {
-  "name": "server",
+  "name": "node-express-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Node Express Mongodb MVC App",
+  "main": "app.js",
+  "bin": {
+    "node-express-app": "bin/index.js"
   },
-  "keywords": [],
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.0.1",
+    "@mongodb-model/model": "^0.0.1",
+    "@sendgrid/mail": "^7.7.0",
+    "@socket.io/redis-adapter": "^8.2.1",
+    "aws-sdk": "^2.1443.0",
+    "axios": "^1.5.0",
+    "bcrypt": "^5.1.1",
+    "connect-mongo": "^5.0.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "email-validator": "^2.0.4",
+    "express": "~4.16.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "farmhash": "^3.3.0",
+    "form-data": "^4.0.0",
+    "gravatar": "^1.8.2",
+    "gravatar-url": "^4.0.1",
+    "html-webpack-plugin": "^5.5.3",
+    "http-errors": "^2.0.0",
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^9.0.1",
+    "mailgun-js": "^0.22.0",
+    "mailgun.js": "^9.2.1",
+    "mongodb": "^5.8.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-localstorage": "^3.0.5",
+    "nunjucks": "^3.2.4",
+    "openai": "^4.2.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "redis": "^4.6.6",
+    "sharp": "^0.32.5",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
+    "socket.io-redis": "^6.1.1",
+    "twilio": "^4.15.0",
+    "vue": "^3.3.4",
+    "vue-loader": "^17.2.2",
+    "vue-template-compiler": "^2.7.14",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-middleware": "^6.1.1",
+    "webpack-hot-middleware": "^2.25.4"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^0.34.1",
+    "@vitest/ui": "^0.34.1",
+    "dotenv": "^16.3.1",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin": "^1.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "jest": "^29.6.4",
+    "prettier": "^3.0.2",
+    "supertest": "^6.3.3",
+    "vitest": "^0.34.2"
+  },
+  "scripts": {
+    "test": "vitest --globals",
+    "start": "node ./bin/www",
+    "dev": "nodemon server",
+    "serve": "pm2 start server.js -i -1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ericson-weah-dev/node-express-app.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "html",
+    "mvc"
+  ],
   "author": "Ericson S. Weah <ericson.weah@gmail.com> (https://www.ericsonweah.com/)",
   "license": "MIT",
-  "dependencies": {
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "ioredis": "^5.3.2",
-    "mongodb": "^6.3.0",
-    "mysql": "^2.18.1",
-    "socket.io": "^4.7.2",
-    "socket.io-client": "^4.7.2"
-  }
+  "bugs": {
+    "url": "https://github.com/ericson-weah-dev/node-express-app/issues"
+  },
+  "homepage": "https://github.com/ericson-weah-dev/node-express-app#readme"
 }
