@@ -27,6 +27,72 @@ class SocialLinks extends \WP_Widget {
 		$this->view = new View();
 	}
 
+
+	public function setViewDatum($variable, $keyString = 'facebook_link'){
+		return [
+			'id' => $this->get_field_id($keyString),
+			'for' => $this->get_field_id($keyString),
+			'name' => $this->get_field_name($keyString),
+			'value' => esc_attr($variable)
+		];
+
+	}
+	public function getForm($instance){
+		// Get Facebook Link
+		if(isset($instance['facebook_link'])){
+			$facebook_link = esc_attr($instance['facebook_link']);
+		}else{
+			$facebook_link = 'https://www.facebook.com';
+		}
+
+		// Get LinkedIn Link
+		if(isset($instance['linkedin_link'])){
+			$linkedin_link = esc_attr($instance['linkedin_link']);
+		}else{
+			$linkedin_link = 'https://www.linkedin.com';
+		}
+
+		// Get Twitter Link
+		if(isset($instance['twitter_link'])){
+			$twitter_link = esc_attr($instance['twitter_link']);
+		}else{
+			$twitter_link = 'https://www.twitter.com';
+		}
+
+		// Get Github Link
+		if(isset($instance['github_link'])){
+			$github_link = esc_attr($instance['github_link']);
+		}else{
+			$github_link = 'https://www.github.com';
+		}
+
+		// Get Google Link
+		if(isset($instance['google_link'])){
+			$google_link = esc_attr($instance['google_link']);
+		}else{
+			$google_link = 'https://www.google.com';
+		}
+		$data = [
+			'facebook' => $this->setViewDatum($facebook_link, 'facebook_link'),
+			'linkedin' => $this->setViewDatum($linkedin_link, 'linkedin_link'),
+			'twitter' => $this->setViewDatum($twitter_link, 'twitter_link'),
+			'github' => $this->setViewDatum($github_link, 'github_link'),
+			'google' => $this->setViewDatum($google_link, 'google_link')
+		];
+		echo $this->view::render('widgets/backend/social-links', $data);
+
+	}
+
+
+	public function getDatumLinks($instance){
+	  return [
+		'facebook' => esc_attr($instance['facebook_link']),
+		'linkedin' => esc_attr($instance['linkedin_link']),
+		'github' => esc_attr($instance['github_link']),
+		'google' => esc_attr($instance['google_link']),
+	  ];
+	}
+
 	/**
 	 * Outputs the content of the widget
 	 *
@@ -35,7 +101,9 @@ class SocialLinks extends \WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		// outputs the content of the widget
-        return "Supper Cool Stuff: ";
+		echo $args['before_widget'];
+		echo $this->view::render('widgets/frontend/social-links', $this->getDatumLinks($instance));
+		echo $args['after_widget'];
 	}
 
 	/**
@@ -44,22 +112,17 @@ class SocialLinks extends \WP_Widget {
 	 * @param array $instance The widget options
 	 */
 
-	public function render_form(){
-		return '
-		<h2>Text input fields</h2>
-		<form>
-			<label for="fname">First name:</label><br />
-			<input type="text" id="fname" name="fname" value="John" /><br />
-			<label for="lname">Last name:</label><br />
-			<input type="text" id="lname" name="lname" value="Doe" />
-		</form>';
-	}
+	
 	public function form( $instance ) {
 		// outputs the options form on admin
-		echo $this->view::render('widgets/social-link');
+		$this->getForm($instance);
+		
        
 	}
 
+	public function getUpdatedDatum($new_instance, $keyString){
+		 return (!empty($new_instance[$keyString])) ? strip_tags($new_instance[$keyString]) : '';
+	}
 	/**
 	 * Processing widget options on save
 	 *
@@ -70,5 +133,12 @@ class SocialLinks extends \WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// processes widget options to be saved
+		return [
+			'facebook_link' => $this->getUpdatedDatum($new_instance, 'facebook_link'),
+			'linkedin_link' => $this->getUpdatedDatum($new_instance, 'linkedin_link'),
+			'github_link' => $this->getUpdatedDatum($new_instance, 'github_link'),
+			'google_link' => $this->getUpdatedDatum($new_instance, 'google_link'),
+		];
+	
 	}
 }

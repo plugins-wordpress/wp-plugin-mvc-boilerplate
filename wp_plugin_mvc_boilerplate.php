@@ -38,9 +38,9 @@ along with WordPress Plugin MVC Boilerplate. If not, see {URI to Plugin License}
 */
 
 
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
 
 
