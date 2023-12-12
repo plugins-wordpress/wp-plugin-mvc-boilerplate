@@ -9,8 +9,8 @@
 </head>
 <body>
 
-<div class="container-fluid mt-3 wrap">
-  <form method="POST"  class="was-validated">
+<div class="container-fluid mt-3">
+  <form method="POST" action="{{inputs['action']}}" class="was-validated">
     <div class="mb-3 mt-3">
       <label for="name" class="form-label">Name:</label>
       <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
@@ -29,8 +29,8 @@
       <div class="valid-feedback">Valid.</div>
       {# <div class="invalid-feedback">Check this checkbox to continue.</div> #}
     </div>
-  <button type="submit" class="btn btn-secondary mb-3">Submit</button>
-  <button type="reset" class="btn btn-secondary mb-3">Clear</button>
+  <button type="submit" class="btn btn-primary mb-3">Submit</button>
+  <button type="reset" class="btn btn-danger mb-3">Clear</button>
   </form>
 </div>
 

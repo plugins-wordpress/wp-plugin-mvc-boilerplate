@@ -6,4 +6,6 @@ class Model {
         $this->init();
     }
     public function init(){}
+
+    public function index() {}
 }

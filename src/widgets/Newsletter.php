@@ -26,12 +26,41 @@ class Newsletter extends \WP_Widget {
 		$this->view = new View();
 	}
 
-	public function getForm($instance){
-		// Get Facebook Link
-		echo $this->view::render('widgets/backend/newsletter');
+	public function setFormDatum($instance, $key, $value) {
+		return (!empty($instance[$key])) ? $instance[$key] : __($value, 'wppmvcb_domain');
+	}
+	public function setViewDatum($variable, $keyString = 'facebook_link'){
+		return [
+			'id' => $this->get_field_id($keyString),
+			'for' => $this->get_field_id($keyString),
+			'name' => $this->get_field_name($keyString),
+			'value' => esc_attr($variable)
+		];
 
 	}
+	public function getForm($instance){
+		// Get Facebook Link
+		$title = $this->setFormDatum($instance, 'title', 'Subscribe For Updates');
+		$recipient = $this->setFormDatum($instance, 'recipient', 'email');
+		$subject = $this->setFormDatum($instance, 'subject', 'subject');
 
+		$data = [
+			'title' => $this->setViewDatum($title, 'title'),
+			'recipient' => $this->setViewDatum($recipient, 'recipient'),
+			'subject' => $this->setViewDatum($subject, 'subject'),
+		];
+		echo $this->view::render('widgets/backend/newsletter', $data);
+	}
+
+
+	public function getDatum($instance){
+		return [
+		  'title' => esc_attr($instance['title']),
+		  'recipient' => esc_attr($instance['recipient']),
+		  'subject' => esc_attr($instance['subject']),
+		  'action' => plugins_url(). '/wp-plugin-mvc-boilerplate/src/forms/Newsletter.php',
+		];
+	  }
 
 	/**
 	 * Outputs the content of the widget
@@ -40,9 +69,15 @@ class Newsletter extends \WP_Widget {
 	 * @param array $instance
 	 */
 	public function widget( $args, $instance ) {
+		
 		// outputs the content of the widget
 		echo $args['before_widget'];
-		echo $this->view::render('widgets/frontend/newsletter');
+			echo $args['before_title'];
+				if(!empty($instance['title'])){
+					echo $instance['title'];
+				}
+			echo $args['before_title'];
+			echo $this->view::render('widgets/frontend/newsletter', ['inputs' => $this->getDatum($instance)]);
 		echo $args['after_widget'];
 	}
 
@@ -59,6 +94,12 @@ class Newsletter extends \WP_Widget {
 		
 	}
 
+
+	
+
+	  public function getUpdatedDatum($new_instance, $keyString){
+		return (!empty($new_instance[$keyString])) ? strip_tags($new_instance[$keyString]) : '';
+   }
 	/**
 	 * Processing widget options on save
 	 *
@@ -69,6 +110,11 @@ class Newsletter extends \WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 		// processes widget options to be saved
+		return [
+			'title' => $this->getUpdatedDatum($new_instance, 'title'),
+			'recipient' => $this->getUpdatedDatum($new_instance, 'recipient'),
+			'subject' => $this->getUpdatedDatum($new_instance, 'subject'),
+		];
 	
 	}
 }

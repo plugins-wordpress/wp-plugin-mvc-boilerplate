@@ -23,7 +23,6 @@
         "symfony/routing": "^7.0",
         "symfony/http-foundation": "^7.0",
         "symfony/http-kernel": "^7.0",
-        "mailgun/mailgun-php": "^3.6",
         "twilio/sdk": "^7.12",
         "nyholm/psr7": "^1.8",
         "vlucas/phpdotenv": "^5.6"
@@ -33,5 +32,8 @@
             "composer/installers": true,
             "php-http/discovery": true
         }
+    },
+    "require-dev": {
+        "mailgun/mailgun-php": "^3.6"
     }
 }
