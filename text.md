@@ -39,3 +39,6 @@ Thank you very much for sharing about your parents! I appreciate, it means a lot
 
 
 For some reason I was not able to show you or tell you some of the things I do. But here is something, if you ever want refresher or you and Will want to get away for a few days, please let me know. You or you and Will comee come here for a weekend or few days and stay in one of my private rooms. I do airbnb with these private rooms, but you or you and Will even want to stay here for a get away, just let know and  you or you two can still away. If you or you and Will decide to stay here for a get away, please do not worry about the price tag on airbnb, I will just make sure you stay here at no cost.
+
+
+Thank you, Melissa. I will sure get the paystubs to you. However, I want to make sure I understand it well; By "between the dates of 08/14 and 11/14" you mean between the dates August 14th  2023 and November 14th, 2023?  Something else?
